@@ -84,11 +84,11 @@ def display_5_day_forecast(data):
                 compiled_forecast_data.update({f'Day {day_counter}'  :  forecast_data})
 
                 print(f"Date & Time: {day_data['Date & Time']}")
-                print(f"Temperature: {day_data['Temperature (°C)']}") # Hot or Cold? Palibre
+                print(f"Temperature: {day_data['Temperature (°C)']}°C") # Hot or Cold? Palibre
                 print(f"Description: {day_data['Description']}") # Cloudy with a chance of meatballs
-                print(f"Humidity: {day_data['Humidity (%)']}") # Water vapor in the atmosphere
-                print(f"Wind Speed: {day_data['Wind Speed (m/s)']}") # Ang lameg ng  hangin payakap naman  
-                print(f"Rain (3h): {day_data['Rain (3h) (mm)']}\n") # Gets the depth of rain from the last 3 hrs. So 1 mm of rain translates to 1 litre of water in a single metre square (Sabi ni Google lmao)
+                print(f"Humidity: {day_data['Humidity (%)']}%") # Water vapor in the atmosphere
+                print(f"Wind Speed: {day_data['Wind Speed (m/s)']} m/s") # Ang lameg ng  hangin payakap naman  
+                print(f"Rain (3h): {day_data['Rain (3h) (mm)']} mm\n") # Gets the depth of rain from the last 3 hrs. So 1 mm of rain translates to 1 litre of water in a single metre square (Sabi ni Google lmao)
 
             # Save the last day's data to a new sheet (Ang weird Kase, may ouptut sa side na saved to day 6)
             df = pd.DataFrame(forecast_data_to_save)
